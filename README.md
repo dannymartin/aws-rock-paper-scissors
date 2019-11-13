@@ -1,0 +1,1 @@
+# aws-rock-paper-scissors
