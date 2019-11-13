@@ -75,18 +75,19 @@ function game(userChoice) {
 		case "pr":
 		case "sp":
 			win(userChoice, computerChoice);
-			writeToObjectStorage("Win");
+			writeToObjectStorage(userChoice + ",Win");
 			break;
 		case "rp":
 		case "ps":
 		case "sr":
 			lose(userChoice, computerChoice);
-			writeToObjectStorage("Lose");
+			writeToObjectStorage(userChoice + ",Lose");
 			break;
 		case "rr":
 		case "pp":
 		case "ss":
 			draw(userChoice, computerChoice);
+			writeToObjectStorage(userChoice + ",Tie")
 			break;
 	}
 }
