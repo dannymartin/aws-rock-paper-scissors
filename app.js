@@ -14,8 +14,7 @@ AWS.config.update({
     IdentityPoolId: "us-east-2:64b24ae3-2573-4a95-b74c-b420ab18cc74"
   })
 });
-//AWS.config.accessKeyId = 'AKIAWKGWT7NTYFP24FNL';
-//AWS.config.secretAccessKey = '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';
+
 
 // create the AWS.Request object
 var bucket = new AWS.S3({ apiVersion: "2006-03-01", params: { Bucket: 'dannymartinresults' } });
