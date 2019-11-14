@@ -11,17 +11,17 @@ const scissors_div = document.getElementById("s");
 AWS.config.update({
   region: 'us-east-2',
   credentials: new AWS.CognitoIdentityCredentials({
-    IdentityPoolId: "us-east-2:64b24ae3-2573-4a95-b74c-b420ab18cc74"
+    IdentityPoolId: "us-east-2:bb2c9d1f-d005-42d3-833e-ffcb4493871f"
   })
 });
 
 
 // create the AWS.Request object
-var bucket = new AWS.S3({ apiVersion: "2006-03-01", params: { Bucket: 'dannymartinresults' } });
+var bucket = new AWS.S3({ apiVersion: "2006-03-01", params: { Bucket: 'group2bestresults' } });
 
 function writeToObjectStorage(uploadthing) {
 	var dateFileName = Date.now().toString() + ".txt";
-	var params = {Key: dateFileName , Bucket: "dannymartinresults" , Body: uploadthing};
+	var params = {Key: dateFileName , Bucket: "group2bestresults" , Body: uploadthing};
 	bucket.putObject(params, function (err, data) {
 				if (err) console.log(err, err.stack); // an error occurred
 				else     console.log(data);           // successful response
